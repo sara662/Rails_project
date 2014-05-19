@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  room_price: 1.5
+  room_max: 1
+  room_photo: MyString
+  room_desc: MyString
+  room_type: MyString
+  branch_id: 1
+
+two:
+  room_price: 1.5
+  room_max: 1
+  room_photo: MyString
+  room_desc: MyString
+  room_type: MyString
+  branch_id: 1

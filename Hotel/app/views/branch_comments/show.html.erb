@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comment:</b>
+  <%= @branch_comment.comment %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @branch_comment.user_id %>
+</p>
+
+<p>
+  <b>Branch:</b>
+  <%= @branch_comment.branch_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_branch_comment_path(@branch_comment) %> |
+<%= link_to 'Back', branch_comments_path %>

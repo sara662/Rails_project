@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  check_in: 2014-05-19
+  check_out: 2014-05-19
+  user_id: 1
+  room_id: 1
+  branch_id: 1
+
+two:
+  check_in: 2014-05-19
+  check_out: 2014-05-19
+  user_id: 1
+  room_id: 1
+  branch_id: 1

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Branch name:</b>
+  <%= @branch.branch_name %>
+</p>
+
+<p>
+  <b>Branch tel:</b>
+  <%= @branch.branch_tel %>
+</p>
+
+<p>
+  <b>Branch address:</b>
+  <%= @branch.branch_address %>
+</p>
+
+<p>
+  <b>Branch photo:</b>
+  <%= @branch.branch_photo %>
+</p>
+
+<p>
+  <b>Myhotel:</b>
+  <%= @branch.myhotel_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_branch_path(@branch) %> |
+<%= link_to 'Back', branches_path %>

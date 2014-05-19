@@ -1,0 +1,27 @@
+<h1>Listing branch_comments</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+    <th>User</th>
+    <th>Branch</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @branch_comments.each do |branch_comment| %>
+  <tr>
+    <td><%= branch_comment.comment %></td>
+    <td><%= branch_comment.user_id %></td>
+    <td><%= branch_comment.branch_id %></td>
+    <td><%= link_to 'Show', branch_comment %></td>
+    <td><%= link_to 'Edit', edit_branch_comment_path(branch_comment) %></td>
+    <td><%= link_to 'Destroy', branch_comment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Branch comment', new_branch_comment_path %>

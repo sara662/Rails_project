@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Check in:</b>
+  <%= @roomreserf.check_in %>
+</p>
+
+<p>
+  <b>Check out:</b>
+  <%= @roomreserf.check_out %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @roomreserf.user_id %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @roomreserf.room_id %>
+</p>
+
+<p>
+  <b>Branch:</b>
+  <%= @roomreserf.branch_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_roomreserf_path(@roomreserf) %> |
+<%= link_to 'Back', roomreserves_path %>

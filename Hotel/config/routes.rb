@@ -1,4 +1,14 @@
 Hotel::Application.routes.draw do
+  resources :branch_comments
+
+  resources :roomreserves
+
+  resources :rooms
+
+  resources :branches
+
+  resources :myhotels
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

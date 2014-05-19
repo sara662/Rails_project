@@ -1,0 +1,31 @@
+<h1>Listing roomreserves</h1>
+
+<table>
+  <tr>
+    <th>Check in</th>
+    <th>Check out</th>
+    <th>User</th>
+    <th>Room</th>
+    <th>Branch</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @roomreserves.each do |roomreserf| %>
+  <tr>
+    <td><%= roomreserf.check_in %></td>
+    <td><%= roomreserf.check_out %></td>
+    <td><%= roomreserf.user_id %></td>
+    <td><%= roomreserf.room_id %></td>
+    <td><%= roomreserf.branch_id %></td>
+    <td><%= link_to 'Show', roomreserf %></td>
+    <td><%= link_to 'Edit', edit_roomreserf_path(roomreserf) %></td>
+    <td><%= link_to 'Destroy', roomreserf, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Roomreserve', new_roomreserf_path %>

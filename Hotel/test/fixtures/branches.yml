@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  branch_name: MyString
+  branch_tel: MyString
+  branch_address: MyString
+  branch_photo: MyString
+  myhotel_id: 1
+
+two:
+  branch_name: MyString
+  branch_tel: MyString
+  branch_address: MyString
+  branch_photo: MyString
+  myhotel_id: 1
