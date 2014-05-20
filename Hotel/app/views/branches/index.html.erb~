@@ -1,0 +1,41 @@
+<h1>Listing branches</h1>
+
+<table>
+  <tr>
+    <th>Branch name</th>
+    <th>Branch tel</th>
+    <th>Branch address</th>
+    <th>Branch photo</th>
+    <th>Myhotel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @branches.each do |branch| %>
+  <tr>
+    <td><%= branch.branch_name %></td>
+    <td><%= branch.branch_tel %></td>
+    <td><%= branch.branch_address %></td>
+    <td><%= branch.branch_photo %></td>
+    <td><%= branch.myhotel_id %></td>
+    <td><%= link_to 'Show', branch %></td>
+    <td>
+    	 	<%= form_tag({controller: "branches", action: "show_comment", :id=> branch.id} , method:"post") do%>
+    		<%= submit_tag("sara") %>
+    	<% end %>
+    </td>
+     <td>
+    	 	<%= form_tag({controller: "branches", action: "available_room", :id=> branch.id} , method:"post") do%>
+    		<%= submit_tag("available") %>
+    	<% end %>
+    </td>
+    <td><%= link_to 'Edit', edit_branch_path(branch) %></td>
+    <td><%= link_to 'Destroy', branch, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Branch', new_branch_path %>
