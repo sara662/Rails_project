@@ -1,0 +1,8 @@
+<%= form_tag({controller: "rooms", action: "searchRooms"} , method:"post") do%>
+    	
+  
+  <%= label_tag 'Branch :' %><%= text_field_tag "branch" %><br>	
+  <%= label_tag 'Check-in date :' %><%= date_select("check", "in", order: [:year, :month, :day]) %><br>
+  <%= label_tag 'Check-out date :' %><%= date_select("check", "out", order: [:year, :month, :day]) %><br>
+  <%= submit_tag "Search" %>
+<% end %>

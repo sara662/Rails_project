@@ -23,9 +23,11 @@
 
     <td><%= room.branch_id %></td>
 
-
-    	 	
-   
+<td>
+    	 	<%= form_tag({controller: "rooms", action: "searchRooms"} , method:"post") do%>
+    		<%= submit_tag("sara") %>
+    	<% end %>
+    </td>
     <td><%= link_to 'Show', room %></td>
     <td><%= link_to 'Edit', edit_room_path(room) %></td>
     <td><%= link_to 'Destroy', room, confirm: 'Are you sure?', method: :delete %></td>

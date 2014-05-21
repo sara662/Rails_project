@@ -15,7 +15,7 @@ development:
   database: rails_booking
   pool: 5
   username: root
-  password: 148412
+  password: hello
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

@@ -38,8 +38,7 @@ class RoomreservesController < ApplicationController
   end
 
 	def insertdb
-		@newroom = Roomreserve.new(:check_in => "2014-05-10", :check_out => "2014-05-30", :user_id => 1,	:room_id => 1,	:branch_id => 1)
-	@newroom.save
+		@roomreserf = Roomreserve.new(:check_in => "2014-05-10", :check_out => "2014-05-30", :user_id => 1,	:room_id => 1,	:branch_id => 1)
 	end
 
 
