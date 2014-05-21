@@ -37,8 +37,8 @@ class RoomreservesController < ApplicationController
     @roomreserf = Roomreserve.find(params[:id])
   end
 
-	def insertdb
-		@newroom = Roomreserve.new(:check_in => "2014-05-10", :check_out => "2014-05-30", :user_id => 1,	:room_id => 1,	:branch_id => 1)
+	def insertdb	
+		@newroom = Roomreserve.new({:check_in => session[:checkin] , :check_out => session[:checkout], :user_id => 1,	:room_id => params[:id],	:branch_id => 1})
 	@newroom.save
 	end
 
@@ -88,7 +88,7 @@ class RoomreservesController < ApplicationController
   end
 end
 def availableRooms
-	@rooms =  Roomreserve.find(:all, :conditions => { :branch_id => [2],: })
+	@rooms =  Roomreserve.find(:all, :conditions => { :branch_id => [2] })
     #@branch_comment = BranchComment.where("")
 
     respond_to do |format|

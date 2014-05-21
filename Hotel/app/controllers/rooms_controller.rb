@@ -105,15 +105,26 @@ class RoomsController < ApplicationController
   end
 
 	def available_rooms
-		
+		av_rooms=[]
 		#avRooms=Roomreserve.find(:all ,:conditions => { : =>  })
-		avRooms=Roomreserve.where("? <= check_in and ? >= check_out and ? <= check_in and ? >= check_out",session[:checkin],session[:checkin],session[:checkout],session[:checkout])
-		for item in avRooms do
-			puts "hhhhhhhhhhhhhhhhhhhhhhhhh"
-			puts "#{item.id}"
-		end
 		
+		resRooms=Roomreserve.where("? >= check_in and ? <= check_in or ? >= check_out and ? <= check_out and branch_id=?",session[:checkin],session[:checkin],session[:checkout],session[:checkout],session[:branch_id])
+		if resRooms
+		for item in resRooms do
+			puts "hhhhhhhhhhhhhhhhhhhhhhhhh"
+			av_rooms.push(item.room_id)
+		end
+puts "b4444444444444444444444"
+@avRooms = Room.find(:all, :conditions => ['id not in (?)', av_rooms])
+		for item in @avRooms do
+			puts "innnnnnnnnnnnnnnnnnnnnn"
+			puts "#{item.id}"
+		end	
 	end 
+
+else
+@avRooms = Room.find(:all, :conditions => ['id not in (0)'])
+end
 
 end
 

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+ <td>
+    	 	<%= form_tag({controller: "branches", action: "show_comment", :id=> branch.id} , method:"post") do%>
+    		<%= submit_tag("book") %>
+    	<% end %>
+ </td>
+<p>
+  <b>Room max:</b>
+  <%= @room.room_max %>
+</p>
+
+<p>
+  <b>Room photo:</b>
+  <%= @room.room_photo %>
+</p>
+
+<p>
+  <b>Room desc:</b>
+  <%= @room.room_desc %>
+</p>
+
+<p>
+  <b>Room type:</b>
+  <%= @room.room_type %>
+</p>
+
+<p>
+  <b>Branch:</b>
+  <%= @room.branch_id %>
+</p>
+
+
+
+<%= link_to 'Back', rooms_path %>

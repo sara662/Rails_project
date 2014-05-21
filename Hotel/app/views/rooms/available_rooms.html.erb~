@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<% @avRooms.each do |room| %>
+<p>
+  <b>rooms_price:</b>
+  
+  <%= room.room_price %>
+
+</p>
+<p>
+  <b>rooms_max:</b>
+
+  <%= room.room_max %>
+
+</p>
+<p>
+  <b>rooms_desc:</b>
+
+  <%= room.room_desc %>
+
+</p>
+
+  <b>rooms_id:</b>
+
+  <%= room.id %>
+<%= submit_tag("available") %>
+<%= link_to 'booking', insertdb_roomreserves_path(room.id) %>
+</p>
+
+  <% end %>
+
+
+

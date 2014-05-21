@@ -23,8 +23,11 @@
 
     <td><%= room.branch_id %></td>
 
-
-    	 	
+    <td>
+    	 	<%= form_tag({controller: "rooms", action: "available_rooms", :id=> room.id} , method:"post") do%>
+    		<%= submit_tag("book") %>
+    	<% end %>
+    </td>
    
     <td><%= link_to 'Show', room %></td>
     <td><%= link_to 'Edit', edit_room_path(room) %></td>

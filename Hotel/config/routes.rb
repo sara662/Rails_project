@@ -29,7 +29,7 @@ Hotel::Application.routes.draw do
 match '/ay7aga', :to => 'rooms#available_rooms'
 
 
-  match '/insertdb', :to => 'roomreserves#insertdb'
+  match '/roomreserves/insertdb/:id(.:format)', :to => 'roomreserves#insertdb', :as => 'insertdb_roomreserves'
   #post '/searchRooms', to: 'rooms#searchRooms'
 
   # The priority is based upon order of creation:
