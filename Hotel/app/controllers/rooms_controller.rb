@@ -102,6 +102,9 @@ class RoomsController < ApplicationController
 	session[:checkin] = $checkin
 	session[:checkout] = $checkout
 	#puts "#{session[:checkin]}"
+	#redirect_to :controller => 'branch_comments', :action => 'show'#, :id => 3, :something => 'else'
+	redirect_to '/branches'
+
   end
 
 	def available_rooms

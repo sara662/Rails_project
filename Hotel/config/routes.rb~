@@ -2,6 +2,7 @@ Hotel::Application.routes.draw do
   get "sessions/new"
 
 	resources :users
+
 	resources :sessions, :only => [:new, :create, :destroy]
 	match '/signup', :to => 'users#new'
 	match '/signin', :to => 'sessions#new'
@@ -21,13 +22,13 @@ Hotel::Application.routes.draw do
   resources :rooms do
     collection do
       post 'searchRooms'
+	post 'available_room'
       end
   end
 
   resources :branches do
   collection do
-   post 'show_comment'
-   post 'available_room'
+   put 'show_comment'
    end
   end
   
@@ -39,11 +40,7 @@ Hotel::Application.routes.draw do
 match '/ay7aga', :to => 'rooms#available_rooms'
 
 
-<<<<<<< HEAD
-  match '/insertdb/:id(.:format)', :to => 'roomreserves#insertdb', :as => 'insertdb_roomreserves'
-=======
-  match '/insertdb', :to => 'roomreserves#insertdb'
->>>>>>> a0d04a9466aaacdc04ac6a8a9baded8a88715f4d
+  match '/roomreserves/insertdb/:id(.:format)', :to => 'roomreserves#insertdb', :as => 'insertdb_roomreserves'
   #post '/searchRooms', to: 'rooms#searchRooms'
 
   # The priority is based upon order of creation:

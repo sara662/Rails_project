@@ -23,7 +23,7 @@
 
   <%= room.id %>
 <%= submit_tag("available") %>
-<%= link_to 'booking', insertdb_roomreserves_path(room.id) %>
+<%= link_to 'booking', insertdb_roomreserves_path(room) %>
 </p>
 
   <% end %>

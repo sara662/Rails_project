@@ -84,7 +84,7 @@ class BranchesController < ApplicationController
 
 def show_comment
     #@branch = Branch.find(params[:id])
-    @commentz= BranchComment.find(:all, :conditions => { :branch_id => params[:id] })
+    @commentz= BranchComment.find(:all, :conditions => { :branch_id => [1] })
     
   end
 end

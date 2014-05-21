@@ -4,6 +4,7 @@
   <b>Comment:</b>
   <% @branch_comment.each do |comment| %>
   <%= comment.comment %>
+  <% end %>
 </p>
 
 

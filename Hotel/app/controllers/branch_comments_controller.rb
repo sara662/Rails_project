@@ -13,7 +13,7 @@ class BranchCommentsController < ApplicationController
   # GET /branch_comments/1
   # GET /branch_comments/1.json
   def show
-    @branch_comment =  BranchComment.find(:all, :conditions => { :branch_id => [1] })
+    @branch_comment =  BranchComment.find(:all, :conditions => { :branch_id => session[:branch_id] })
     #@branch_comment = BranchComment.where("")
 
     respond_to do |format|

@@ -2,6 +2,7 @@ Hotel::Application.routes.draw do
   get "sessions/new"
 
 	resources :users
+
 	resources :sessions, :only => [:new, :create, :destroy]
 	match '/signup', :to => 'users#new'
 	match '/signin', :to => 'sessions#new'
@@ -21,13 +22,13 @@ Hotel::Application.routes.draw do
   resources :rooms do
     collection do
       post 'searchRooms'
+	post 'available_room'
       end
   end
 
   resources :branches do
   collection do
-   post 'show_comment'
-   post 'available_room'
+   put 'show_comment'
    end
   end
   
@@ -36,7 +37,7 @@ Hotel::Application.routes.draw do
   resources :myhotels
 
   match '/search', :to => 'rooms#searchRooms.html.erb'
-match '/ay7aga', :to => 'rooms#available_rooms'
+match '/booking', :to => 'rooms#available_rooms'
 
 
   match '/roomreserves/insertdb/:id(.:format)', :to => 'roomreserves#insertdb', :as => 'insertdb_roomreserves'

@@ -21,12 +21,12 @@
     <td><%= branch.myhotel_id %></td>
     <td><%= link_to 'Show', branch %></td>
     <td>
-    	 	<%= form_tag({controller: "branches", action: "show_comment", :id=> branch.id} , method:"post") do%>
-    		<%= submit_tag("sara") %>
+    	 	<%= form_tag({controller: "branches", action: "show_comment", :id=> branch.id} , method:"put") do%>
+    		<%= submit_tag("view_comments") %>
     	<% end %>
     </td>
      <td>
-    	 	<%= form_tag({controller: "branches", action: "available_room", :id=> branch.id} , method:"post") do%>
+    	 	<%= form_tag({controller: "rooms", action: "available_rooms", :id=> branch.id} , method:"post") do%>
     		<%= submit_tag("available") %>
     	<% end %>
     </td>
