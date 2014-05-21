@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140519161438) do
+ActiveRecord::Schema.define(:version => 20140521094508) do
 
   create_table "branch_comments", :force => true do |t|
     t.string   "comment"
@@ -56,6 +56,21 @@ ActiveRecord::Schema.define(:version => 20140519161438) do
     t.integer  "branch_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "user_name"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "email"
+    t.integer  "telephone"
+    t.string   "address"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
 end

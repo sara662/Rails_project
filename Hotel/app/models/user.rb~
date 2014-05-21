@@ -1,0 +1,49 @@
+require 'digest'
+
+class User < ActiveRecord::Base
+	validates :password,:presence =>true,
+	          :confirmation =>true
+	validates_confirmation_of :password
+	validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
+	validates :email, uniqueness: true
+	validates :first_name, length: { maximum: 30 }
+	validates :last_name, length: { maximum: 30 }
+
+	validates :user_name, presence: true
+	validates :user_name, uniqueness: true
+	
+	
+	before_save :encrypt_password
+	def has_password?(password)
+		encrypted_password == encrypt(password)
+	end
+	def self.authenticate(email, password)
+		user = find_by_email(email)
+	return nil if user.nil?
+	return user if user.has_password?(password)
+	end
+	def self.authenticate_with_salt(id, cookie_salt)
+		user = find_by_id(id)
+		(user && user.salt == cookie_salt) ? user : nil
+	end
+
+	private
+	def encrypt_password
+		self.salt = make_salt if new_record?
+		self.encrypted_password = encrypt(password)
+		self.password = encrypt(password)
+	end
+	def encrypt(string)
+		secure_hash("#{salt}--#{string}")
+	end
+	def make_salt
+		secure_hash("#{Time.now.utc}--#{password}")
+	end
+	def secure_hash(string)
+		Digest::SHA2.hexdigest(string)
+	end
+	
+
+
+
+end
