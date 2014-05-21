@@ -87,3 +87,13 @@ class RoomreservesController < ApplicationController
     end
   end
 end
+def availableRooms
+	@rooms =  Roomreserve.find(:all, :conditions => { :branch_id => [2],: })
+    #@branch_comment = BranchComment.where("")
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @branch_comment }
+    end 
+end
+

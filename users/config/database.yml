@@ -7,7 +7,7 @@ development:
   adapter: mysql2
   database: rails_booking
   username: root
-  password: 148412
+  password: 123456
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -17,11 +17,11 @@ test:
   adapter: mysql2
   database: rails_booking
   username: root
-  password: 148412
+  password: 123456
   host: localhost
 production:
   adapter: mysql2
   database: rails_booking
   username: root
-  password: 148412
+  password: 123456
   host: localhost

@@ -37,11 +37,14 @@ class RoomreservesController < ApplicationController
     @roomreserf = Roomreserve.find(params[:id])
   end
 
+<<<<<<< HEAD
 	def insertdb
 		@roomreserf = Roomreserve.new(:check_in => "2014-05-10", :check_out => "2014-05-30", :user_id => 1,	:room_id => 1,	:branch_id => 1)
 	end
 
 
+=======
+>>>>>>> 98255c86a337ac7615a29855d23aeb3c7beafdc9
   # POST /roomreserves
   # POST /roomreserves.json
   def create
