@@ -1,5 +1,9 @@
 class Roomreserve < ActiveRecord::Base
 	belongs_to :branch
 	belongs_to :room
+<<<<<<< HEAD
 	belongs_to :user
+=======
+	#belongs_to :user
+>>>>>>> 771f0add21cd60ac9269c7cd0fc4827d32ce75e6
 end

@@ -37,6 +37,12 @@ class RoomreservesController < ApplicationController
     @roomreserf = Roomreserve.find(params[:id])
   end
 
+	def insertdb
+		@newroom = Roomreserve.new(:check_in => "2014-05-10", :check_out => "2014-05-30", :user_id => 1,	:room_id => 1,	:branch_id => 1)
+	@newroom.save
+	end
+
+
   # POST /roomreserves
   # POST /roomreserves.json
   def create
@@ -81,3 +87,13 @@ class RoomreservesController < ApplicationController
     end
   end
 end
+def availableRooms
+	@rooms =  Roomreserve.find(:all, :conditions => { :branch_id => [2],: })
+    #@branch_comment = BranchComment.where("")
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @branch_comment }
+    end 
+end
+

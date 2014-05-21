@@ -2,18 +2,12 @@
 
 <p>
   <b>Comment:</b>
-  <%= @branch_comment.comment %>
+  <% @branch_comment.each do |comment| %>
+  <%= comment.comment %>
+  <% end %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @branch_comment.user_id %>
-</p>
 
-<p>
-  <b>Branch:</b>
-  <%= @branch_comment.branch_id %>
-</p>
 
 
 <%= link_to 'Edit', edit_branch_comment_path(@branch_comment) %> |

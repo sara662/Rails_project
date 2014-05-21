@@ -15,7 +15,11 @@ development:
   database: rails_booking
   pool: 5
   username: root
-  password: 148412
+<<<<<<< HEAD
+  password: hello
+=======
+  password: 123456
+>>>>>>> 98255c86a337ac7615a29855d23aeb3c7beafdc9
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +32,7 @@ test:
   database: rails_booking
   pool: 5
   username: root
-  password: 148412
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -38,5 +42,5 @@ production:
   database: rails_booking
   pool: 5
   username: root
-  password: 148412
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock

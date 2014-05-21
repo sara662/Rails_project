@@ -13,8 +13,8 @@ class BranchesController < ApplicationController
   # GET /branches/1
   # GET /branches/1.json
   def show
-    @branch = Branch.find(params[:id])
-
+    @branch =Branch.find(params[:id])
+		 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @branch }
@@ -80,4 +80,32 @@ class BranchesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+def show_comment
+    #@branch = Branch.find(params[:id])
+    @commentz= BranchComment.find(:all, :conditions => { :branch_id => params[:id] })
+    
+  end
 end
+
+def available_room
+	#@reseredrooms = Roomreserve.find(:all, :conditions=>{:check_in => params[:check_in]  )	
+		
+			@rooms = Room.all
+	#@reseredrooms = Room.find_by_sql(%Q{
+		#SELECT *, count(room_type) AS count FROM rooms WHERE branch_id = params[:id] and id NOT IN (
+			#SELECT room_id FROM roomreserves WHERE branch_id = params[:id] AND check_in <= "2014-05-29" AND check_out >= "2014-05-29" AND check_in <= "2014-05-29" AND check_out >= "2014-05-29") GROUP BY(room_type)
+		#)
+	#})
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+      end
+
+end
+######################################
+
+
+

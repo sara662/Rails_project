@@ -1,0 +1,27 @@
+<h1>Listing branches</h1>
+<p>
+<table>
+  <tr>
+    <th>Branch name</th>
+    <th>Branch tel</th>
+    <th>Branch address</th>
+    <th>Branch photo</th>
+    <th>Myhotel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rooms.each do |room| %>
+  <tr>
+    <td><%= room.room_desc %></td>
+    <td><%= room.room_price %></td>
+    <td><%= room.room_max %></td>
+    <td><%= room.room_desc %></td>
+    <td><%= room.room_type %></td>
+    <td><%= link_to 'Show', room %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

@@ -1,0 +1,22 @@
+/home/roufyda/.rvm/rubies/ruby-2.1.1/bin/ruby extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling bcrypt_ext.c
+bcrypt_ext.c: In function ‘bcrypt_wrapper’:
+bcrypt_ext.c:27:5: warning: implicit declaration of function ‘ruby_bcrypt’ [-Wimplicit-function-declaration]
+bcrypt_ext.c: At top level:
+bcrypt_ext.c:25:14: warning: ‘bcrypt_wrapper’ defined but not used [-Wunused-function]
+compiling crypt.c
+compiling wrapper.c
+In file included from wrapper.c:27:0:
+/home/roufyda/.rvm/rubies/ruby-2.1.1/include/ruby-2.1.0/ruby/backward/util.h:2:2: warning: #warning use "ruby/util.h" instead of bare "util.h" [-Wcpp]
+linking shared-object bcrypt_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20140520-7141-w6oaps
+installing default bcrypt_ext libraries

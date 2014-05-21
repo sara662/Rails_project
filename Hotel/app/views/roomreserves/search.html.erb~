@@ -1,0 +1,7 @@
+<%= form_tag "new", :method => :post do %>
+  <%= label_tag 'Branch :' %><%= text_field_tag "branch" %><br>	
+  <%= label_tag 'Check-in date :' %><%= date_select 'roomreserve', 'checkin', {:order =>
+[:year, :month, :day]} %><br>
+  <%= label_tag 'Check-out date :' %><%= text_field_tag "checkout" %><br>
+  <%= submit_tag "Search" %>
+<% end %>

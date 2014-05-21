@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comment:</b>
+  <% @branch_comment.each do |comment| %>
+  <%= comment.comment %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_branch_comment_path(@branch_comment) %> |
+<%= link_to 'Back', branch_comments_path %>
