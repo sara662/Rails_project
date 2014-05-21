@@ -1,0 +1,19 @@
+<%= form_for :Hotel do |f| %>
+  <div class="field">
+    <%= f.label :myhotel_name %><br />
+    <%= f.text_field :myhotel_name %>
+  </div>
+  <div class="field">
+    <%= f.label :branch_name %><br />
+    <%= f.text_field :branch_name %>
+  </div>
+  <div class="field">
+    <%= f.label :check_in %><br />
+    <%= f.date_select :check_in %>
+  </div>
+  <div class="field">
+    <%= f.label :check_out %><br />
+    <%= f.date_select :check_out %>
+  </div>
+
+<% end %>
