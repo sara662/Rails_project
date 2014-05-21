@@ -15,7 +15,11 @@ development:
   database: rails_booking
   pool: 5
   username: root
-  password: 123456
+<<<<<<< HEAD
+  password: hello
+=======
+  password: 148412
+>>>>>>> a0d04a9466aaacdc04ac6a8a9baded8a88715f4d
 
   socket: /var/run/mysqld/mysqld.sock
 
@@ -29,7 +33,11 @@ test:
   database: rails_booking
   pool: 5
   username: root
-  password: 123456
+<<<<<<< HEAD
+  password: hello
+=======
+  password: 148412
+>>>>>>> a0d04a9466aaacdc04ac6a8a9baded8a88715f4d
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -39,5 +47,9 @@ production:
   database: rails_booking
   pool: 5
   username: root
-  password: 123456
+<<<<<<< HEAD
+  password: hello
+=======
+  password: 148412
+>>>>>>> a0d04a9466aaacdc04ac6a8a9baded8a88715f4d
   socket: /var/run/mysqld/mysqld.sock

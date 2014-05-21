@@ -15,7 +15,9 @@ development:
   database: rails_booking
   pool: 5
   username: root
+
   password: hello
+
 
   socket: /var/run/mysqld/mysqld.sock
 
@@ -29,7 +31,9 @@ test:
   database: rails_booking
   pool: 5
   username: root
+
   password: hello
+
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -39,5 +43,7 @@ production:
   database: rails_booking
   pool: 5
   username: root
+
   password: hello
+
   socket: /var/run/mysqld/mysqld.sock
